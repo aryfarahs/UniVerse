@@ -90,7 +90,7 @@ footer .action {
 }
 
 .sideSelect {
-    background-color: #E38B94;
+    background-color: #ffcfda;
     margin-left: 0px;
     padding: 10px;
     font-size: 16px;
@@ -152,21 +152,4 @@ footer .action {
     border-bottom-right-radius: 5px;
     cursor: pointer;
     padding: 10px;
-}
-
-.aviso {
-    display: inline-flex;
-    margin-left: 40px;
-    margin-top: 70px;
-}
-
-
-.containerAC {
-    display: inline-flex;
-    flex-direction: column;
-    padding: 0px;
-    margin-left: 200px;
-    margin-top: 0px;
-    padding-top: 0px;
-    font-family: 'Courier New', Courier, monospace;
 }

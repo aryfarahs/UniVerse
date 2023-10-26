@@ -181,10 +181,8 @@ footer .action {
     padding: 15px;
     width: 800px;
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
-/* Notas e frequencia */
 .tabela-container {
     flex-grow: 1;
     display: flex;
