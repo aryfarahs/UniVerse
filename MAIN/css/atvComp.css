@@ -177,8 +177,9 @@ footer .action {
     border: 2px;
     border-color: #A43039;
     border-radius: 10px;
-    margin: 40px;
+    margin-left: 250px;
     padding: 15px;
-    width: 800px;
+    width: 900px;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
 }
