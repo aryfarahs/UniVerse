@@ -90,7 +90,7 @@ footer .action {
 }
 
 .sideSelect {
-    background-color: #E38B94;
+    background-color: #ffcfda;
     margin-left: 0px;
     padding: 10px;
     font-size: 16px;
@@ -170,3 +170,43 @@ footer .action {
     padding-top: 0px;
     font-family: 'Courier New', Courier, monospace;
 }
+
+.warnBox {
+    display: inline-flex;
+    background-color: #ffcfda;
+    border: 2px;
+    border-color: #A43039;
+    border-radius: 10px;
+    margin: 40px;
+    padding: 15px;
+    width: 800px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* Notas e frequencia */
+.tabela-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+  }
+  table {
+    border-collapse: collapse;
+    width: 70%; 
+    border: 3px solid black; 
+  }
+  th, td {
+  border: 2px solid black; 
+  padding: 8px;
+  text-align: center;
+  }
+  
+  th:first-child, td:first-child {
+  width: 50%;
+  }
+  
+  th:nth-child(2), td:nth-child(2),
+  th:nth-child(3), td:nth-child(3) {
+  width: 25%;
+  }
