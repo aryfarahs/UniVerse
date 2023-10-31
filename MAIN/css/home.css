@@ -159,7 +159,7 @@ footer .action {
     display: inline-flex;
     margin-left: 70px;
     margin-top: 30px;
-    margin-bottom: 700px;
+    margin-bottom: 30px;
 }
 
 .textAviso {
@@ -180,20 +180,20 @@ footer .action {
 }
 
 .warnBox {
-    display: inline-block;
-    position: absolute;
-
     background-color: #ffd3de;
     border-style: solid;
     border-color: #A43039;
     border-radius: 10px;
-    margin-left: -360px;
+    margin-left: 15px;
     padding: 15px;
     width: 900px;
     font-family: 'Lato', sans-serif;
     font-size: 16px;
-    margin-top: 230px;
-    margin-bottom: 200px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    &:hover{
+        cursor: pointer;
+    }
 }
 
 .subW {
@@ -202,14 +202,13 @@ footer .action {
 }
 
 .compGraph {
-    display: inline-block;
-    position: absolute;
+    display: flex;
 
     height: 200px;
     width: 200px;
     border-radius: 50%;
-    margin-left: 620px;
-    margin-top: 90px;
+    margin-left: 720px;
+    margin-top: 0px;
     background-color: #A43039;
 }
 
