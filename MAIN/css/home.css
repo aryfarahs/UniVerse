@@ -90,7 +90,7 @@ footer .action {
 }
 
 .sideSelect {
-    background-color: #ffcfda;
+    background-color: #ffd3de;
     margin-left: 0px;
     padding: 10px;
     font-size: 16px;
@@ -136,6 +136,7 @@ footer .action {
     padding: 10px;
 }
 
+
 .atvCompSelect {
     background-color: #A43039;
     margin-left: 0px;
@@ -154,3 +155,67 @@ footer .action {
     padding: 10px;
 }
 
+.aviso {
+    display: inline-flex;
+    margin-left: 70px;
+    margin-top: 30px;
+    margin-bottom: 700px;
+}
+
+.textAviso {
+    font-size: 48px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+
+.containerAC {
+    display: inline-flex;
+    flex-direction: column;
+    padding: 0px;
+    margin-left: 200px;
+    margin-top: 0px;
+    padding-top: 0px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.warnBox {
+    display: inline-block;
+    position: absolute;
+
+    background-color: #ffd3de;
+    border-style: solid;
+    border-color: #A43039;
+    border-radius: 10px;
+    margin-left: -360px;
+    padding: 15px;
+    width: 900px;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    margin-top: 230px;
+    margin-bottom: 200px;
+}
+
+.subW {
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.compGraph {
+    display: inline-block;
+    position: absolute;
+
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin-left: 620px;
+    margin-top: 90px;
+    background-color: #A43039;
+}
+
+.horas {
+    margin-top: 210px;
+    font-weight: bolder;
+    font-size: 18px;
+    text-align: center;
+}
