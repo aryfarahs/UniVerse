@@ -29,9 +29,9 @@ header > h1 {
     flex: 1;
 }
 
-/* main {
+main {
     padding-top: 0px;
-} */
+}
 
 header > img {
     display: inline-block;
@@ -77,18 +77,6 @@ footer .action {
     min-height: 100vh;
 }
 
-/* .sideNav {
-    display: inline-flex;
-    padding: 20px;
-    padding-top: 0px;
-    margin-top: 0px;
-    padding-left: 0px;
-    margin-left: 0px;
-    width: 1px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 16px;
-} */
-
 .sideSelect {
     background-color: #ffcfda;
     margin-left: 0px;
@@ -113,7 +101,7 @@ main {
 }
 .sideNav {
     display: inline-flex;
-    width: 180px; 
+    width: 170px; 
     padding: 20px;
     font-family: 'Courier New', Courier, monospace;font-size: 16px;
     padding-top: 0px;
