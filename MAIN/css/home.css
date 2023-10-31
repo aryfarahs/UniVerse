@@ -99,19 +99,22 @@ footer .action {
 
 }
 
-.navAtvComp {
-    display: inline-flex;
+
+/* PAGINA AVISOS */
+
+.navHome {
+    display: flex;
     margin-top: 0px;
     padding: 0px;
 }
 
-.navAtvComp a {
+.navHome a {
     display: inline-flex;
     margin-top: 0px;
     padding-top: 0px;
 }
 
-.navAtvComp ul {
+.navHome ul {
     list-style-type: none;
     margin: 10px;
     padding: 10px;
@@ -120,7 +123,7 @@ footer .action {
     padding-top: 0px;
 }
 
-.navAtvComp li {
+.navHome li {
     list-style-type: none;
     margin: 10px;
     margin-top: 0px;
@@ -129,7 +132,7 @@ footer .action {
     display: flex;
 }
 
-.navAtvComp li:hover {
+.navHome li:hover {
     background-color: #D9D9D9;
     border-radius: 5px;
     cursor: pointer;
@@ -137,7 +140,7 @@ footer .action {
 }
 
 
-.atvCompSelect {
+.homeSelect {
     background-color: #A43039;
     margin-left: 0px;
     padding: 10px;
@@ -162,14 +165,21 @@ footer .action {
     margin-bottom: 30px;
 }
 
+.aviso img {
+    width: 70px;
+    height: 60px;
+    margin-left: -50px;
+    margin-right: 0px;
+}
+
 .textAviso {
-    font-size: 48px;
-    margin-top: 20px;
-    margin-left: 50px;
+    font-size: 40px;
+    margin-top: 10px;
+    margin-left: 40px;
 }
 
 
-.containerAC {
+.containerH {
     display: inline-flex;
     flex-direction: column;
     padding: 0px;
@@ -189,8 +199,8 @@ footer .action {
     width: 900px;
     font-family: 'Lato', sans-serif;
     font-size: 16px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     &:hover{
         cursor: pointer;
     }
@@ -201,20 +211,11 @@ footer .action {
     font-size: 18px;
 }
 
-.compGraph {
-    display: flex;
 
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    margin-left: 720px;
-    margin-top: 0px;
-    background-color: #A43039;
+.subpagina {
+    display: none;
 }
 
-.horas {
-    margin-top: 210px;
-    font-weight: bolder;
-    font-size: 18px;
-    text-align: center;
+.pagina {
+    display: inline-flex   ;
 }
