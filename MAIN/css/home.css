@@ -187,7 +187,7 @@ footer .action {
     border-style: solid;
     border-color: #A43039;
     border-radius: 10px;
-    margin-left: -550px;
+    margin-left: -360px;
     padding: 15px;
     width: 900px;
     font-family: 'Lato', sans-serif;
@@ -208,7 +208,7 @@ footer .action {
     height: 200px;
     width: 200px;
     border-radius: 50%;
-    margin-left: 440px;
+    margin-left: 620px;
     margin-top: 90px;
     background-color: #A43039;
 }
