@@ -12,6 +12,14 @@
         <h1>UNIVERSE</h1>
     </header>
 
+    <?php
+    
+    require_once 'includes.php';
+    
+    
+    
+    ?>
+
     <main>
         <div class="sideNav">
             <nav>
@@ -30,26 +38,27 @@
             <script src="../js/notas.js"></script> -->
             <table id="tabela-aulas">
                 <?php
+                    $pesq = $banco->query("select * from materias;");
+                    $qtdLinha = $pesq->num_rows;
+                    
                     echo "<tr>";
-                        echo "<td>Matérias</td>";
-                        echo "<td>Carga horária</td>";
-                    echo "/<tr>";
-                
-                
+                    echo "<td>Matérias</td>";
+                    echo "<td>Carga horária</td>";
+                    echo "<tr>";
+                    
+                    for($i = 1; $i <= $qtdLinha; $i++){
+
+                        $objAtual = $pesq->fetch_object();
+                       
+
+                        echo "<tr>";
+                           echo "<td>$objAtual->Materia</td>";
+                           echo "<td>$objAtual->Carga</td>";
+                        echo "</tr>";
+
+                    };
                 
                 ?>
-
-
-
-
-
-                <!-- <tr>
-                    <td>Matérias</td>
-                    <td>Carga horária</td>
-                </tr> -->
-
-
-
 
 
             </table>
