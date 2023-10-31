@@ -1,0 +1,10 @@
+<?php
+
+$banco = mysqli();
+
+
+
+
+
+
+
