@@ -1,3 +1,5 @@
+/* GERAL */
+
 * {
     margin: 0px;
     padding: 0px;
@@ -148,6 +150,7 @@ footer .action {
     border-radius: 5px;
     margin-top: 0px;
     padding-top: 0px;
+    color: #F3EDE0;
 }
 
 .sideNav li:hover {
@@ -156,6 +159,7 @@ footer .action {
     border-bottom-right-radius: 5px;
     cursor: pointer;
     padding: 10px;
+    color: #F3EDE0;
 }
 
 .aviso {
@@ -218,4 +222,45 @@ footer .action {
 
 .pagina {
     display: inline-flex   ;
+}
+
+
+/* PÁGINA ESTÁGIO */
+
+.estTitle {
+    display: flex;
+    background-color: #A43039;
+    border-radius: 5px;
+    color: #F3EDE0;
+    padding: 10px;
+    justify-content: space-between;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 40px;
+    width: 1000px;
+}
+
+.estBox {
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-width: 1px;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 950px;
+} 
+
+.infoEstagio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 25px;  
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.textEstagio {
+    display: none;
+    margin: 30px;
 }

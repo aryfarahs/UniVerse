@@ -66,7 +66,7 @@
         
 
 
-            <div class="warnBox" onclick="revelAviso1()">
+            <div class="warnBox" onclick="revealTxt('aviso1')">
                 
                 <h3>Está com problemas? Entre em contato!<img src="../images/select_icon.png" width="30px" height="15px" style="margin-left: 510px;"></h3> 
                 <p id="aviso1" style="margin-top: 15px; display: none;">
@@ -74,7 +74,7 @@
                 </p>
             </div>
 
-            <div class="warnBox" onclick="revelAviso2()"> 
+            <div class="warnBox" onclick="revealTxt('aviso2')"> 
 
                 <h3>Não deixe de enviar os documentos necessários para a matrícula!<img src="../images/select_icon.png" width="30px" height="15px" style="margin-left: 282px;"></h3>
      
@@ -89,7 +89,7 @@
                 </p>
             </div>
 
-            <div class="warnBox" onclick="revelAviso3()">    
+            <div class="warnBox" onclick="revealTxt('aviso3')">    
                 
                 <h3>Sobre a Carteirinha Virtual!<img src="../images/select_icon.png" width="30px" height="15px" style="margin-left: 627px;"></h3>
                 
@@ -101,37 +101,81 @@
         </div>
 
 
-            <!-- FACULRIDES -->
-            <div class="containerH subpagina" id="idHF">
+        <!-- FACULRIDES -->
+        <div class="containerH subpagina" id="idHF">
 
-                <div class="navHome">
-                    <nav>
-                        <ul>
-                            <a onclick="showPage('idHH')"><li>HOME</li></a>
-                            <a onclick="showPage('idHA')"><li>AVISOS</li></a>
-                            <a><li class="homeSelect">FACULRIDES</li></a>
-                            <a onclick="showPage('idHE')"><li>ESTÁGIOS</li></a>
-                        </ul>
-                    </nav>
-                </div>
-
+            <div class="navHome">
+                <nav>
+                    <ul>
+                        <a onclick="showPage('idHH')"><li>HOME</li></a>
+                        <a onclick="showPage('idHA')"><li>AVISOS</li></a>
+                        <a><li class="homeSelect">FACULRIDES</li></a>
+                        <a onclick="showPage('idHE')"><li>ESTÁGIOS</li></a>
+                    </ul>
+                </nav>
             </div>
 
+        </div>
 
-            <!-- ESTÁGIO -->
 
-            <div class="containerH subpagina" id="idHE">
-                <div class="navHome">
-                    <nav>
-                        <ul>
-                            <a onclick="showPage('idHH')"><li>HOME</li></a>
-                            <a onclick="showPage('idHA')"><li>AVISOS</li></a>
-                            <a onclick="showPage('idHF')"><li>FACULRIDES</li></a>
-                            <a><li class="homeSelect">ESTÁGIOS</li></a>
-                        </ul>
-                    </nav>
-                </div>
+        <!-- ESTÁGIO -->
+
+        <div class="containerH subpagina" id="idHE">
+            <div class="navHome">
+                <nav>
+                    <ul>
+                        <a onclick="showPage('idHH')"><li>HOME</li></a>
+                        <a onclick="showPage('idHA')"><li>AVISOS</li></a>
+                        <a onclick="showPage('idHF')"><li>FACULRIDES</li></a>
+                        <a><li class="homeSelect">ESTÁGIOS</li></a>
+                    </ul>
+                </nav>
             </div>
+
+                <div class="estTitle">
+                    <h3>Logo</h3>
+                    <h3>Empresa</h3>
+                    <h3>Área</h3>
+                    <h3>Detalhes</h3>
+                    
+                </div>
+
+                <div style="margin: auto;">
+                    <div class="estBox" onclick="revealTxt('estagioXXX')">
+                        <div class="infoEstagio">
+                            <img src="../images/empresa.png" alt="Empresa X">
+                            <p style="margin-top: 15px;">Empresa X</p>
+                            <p style="margin-top: 15px;">Análise de Sitstemas</p>
+                            <h3 style="margin-top: 15px;">VER</h3>
+                        </div>
+                        <p class="textEstagio" id="estagioXXX">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit sunt dolorum sed? Quos aliquam qui totam unde iure. Quae ab mollitia aliquam earum in iste totam similique accusantium quam eligendi. Lorem ipsum dolor sit amet consectetur adipisicing elit. At quisquam vel, deserunt labore omnis corporis reprehenderit, quam, sed provident eveniet assumenda mollitia id consectetur placeat. Consequuntur facere architecto minus in. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem sapiente vel a assumenda praesentium quia harum nam rerum amet libero ducimus in architecto, aut dolorum atque ab facilis nisi quod?</p>
+                    </div>
+
+                    <div class="estBox" onclick="revealTxt('estagioYYY')">
+                        <div class="infoEstagio">
+                            <img src="../images/empresa.png" alt="Empresa Y">
+                            <p style="margin-top: 15px;">Empresa Y</p>
+                            <p style="margin-top: 15px;">Desenvolvedor Python</p>
+                            <h3 style="margin-top: 15px;">VER</h3>
+                        </div>
+                        <p class="textEstagio" id="estagioYYY">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit sunt dolorum sed? Quos aliquam qui totam unde iure. Quae ab mollitia aliquam earum in iste totam similique accusantium quam eligendi. Lorem ipsum dolor sit amet consectetur adipisicing elit. At quisquam vel, deserunt labore omnis corporis reprehenderit, quam, sed provident eveniet assumenda mollitia id consectetur placeat. Consequuntur facere architecto minus in. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem sapiente vel a assumenda praesentium quia harum nam rerum amet libero ducimus in architecto, aut dolorum atque ab facilis nisi quod?</p>
+                    </div>
+
+                    <div class="estBox" onclick="revealTxt('estagioZZZ')">
+                        <div class="infoEstagio">
+                            <img src="../images/empresa.png" alt="Empresa Z">
+                            <p style="margin-top: 15px;">Empresa Z</p>
+                            <p style="margin-top: 15px;">Gestor de Projetos</p>
+                            <h3 style="margin-top: 15px;">VER</h3>
+                        </div>
+                        <p class="textEstagio" id="estagioZZZ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit sunt dolorum sed? Quos aliquam qui totam unde iure. Quae ab mollitia aliquam earum in iste totam similique accusantium quam eligendi. Lorem ipsum dolor sit amet consectetur adipisicing elit. At quisquam vel, deserunt labore omnis corporis reprehenderit, quam, sed provident eveniet assumenda mollitia id consectetur placeat. Consequuntur facere architecto minus in. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem sapiente vel a assumenda praesentium quia harum nam rerum amet libero ducimus in architecto, aut dolorum atque ab facilis nisi quod?</p>
+                    </div>
+                </div>  
+
+                    
+
+
+        </div>
 
         
 
