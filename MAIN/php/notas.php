@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/notas.css">
+    <script src="../js/javascript.js"></script>
     <title>UniVerse</title>
 </head>
 <body class="princ" >
@@ -16,11 +17,11 @@
         <div class="sideNav" id="notasfreq">
             <nav>
                 <ul>
-                    <li><a href="home.php">&nbsp;HOME</a></li>
-                    <li><a href="aulas.php">&nbsp;MINHAS AULAS</a></li>
-                    <li class="sideSelect"><a href="notas.php">&nbsp;NOTAS/<br>&nbspFREQUÊNCIA</a></li>
-                    <li><a href="atvComp.php">&nbsp;ATIVIDADES &nbsp;COMPLEMENTARES</a></li>
-                    <li><a href="posFin.php">&nbsp;POSIÇÃO &nbsp;FINANCEIRA</a></li>
+                    <a href="home.php"><li>&nbsp;HOME</li></a>
+                    <a href="aulas.php"><li>&nbsp;MINHAS AULAS</li></a>
+                    <a href="notas.php"><li class="sideSelect">&nbsp;NOTAS/<br>&nbspFREQUÊNCIA</li></a>
+                    <a href="atvComp.php"><li>&nbsp;ATIVIDADES &nbsp;COMPLEMENTARES</li></a>
+                    <a href="posFin.php"><li>&nbsp;POSIÇÃO &nbsp;FINANCEIRA</li></a>
                 </ul>
             </nav>
         </div>
@@ -30,7 +31,6 @@
             <!-- <table id="tabela"></table>
                 <script src="../js/notas.js"></script> -->
             <table id="tabela-notas"></table>
-            <script src="../js/notas.js"></script>
         </div>
     </main>
 
