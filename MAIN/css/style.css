@@ -1,12 +1,25 @@
 /* GERAL */
 
+
+
+
+
+:root{
+    --verm: #A43039;
+    --branquin: #F3EDE0;
+}
+/* #A43039 */
+
+
+
+
 * {
     margin: 0px;
     padding: 0px;
 } 
 
 header {
-    background-color: #A43039;
+    background-color: var(--verm);
     padding: 35px;
     margin-bottom: 0px;
 }
@@ -16,7 +29,7 @@ header > h1 {
     font-family: monospace;
     font-size: 40px;
     font-weight: bolder;
-    color: #F3EDE0;
+    color: var(--branquin);
     margin-top: 0px;
     margin-bottom: 0px;
 }
@@ -63,9 +76,10 @@ a {
 footer {
     display: flex;
     justify-content: center;
-    background-color: #A43039;
+    background-color: var(--verm);
     padding-bottom: 2px;
     padding-top: 5px;
+    color: var(--branquin);
 }
 
 footer .action {
@@ -75,7 +89,7 @@ footer .action {
 
 .sideNav > nav {
     border-right: 1px solid;
-    border-color: #A43039;
+    border-color: var(--verm);
     width: 170px;
     padding-right: 5px;
     min-height: 100vh;
@@ -94,7 +108,7 @@ footer .action {
 }
 
 .sideSelect {
-    background-color: #ffd3de;
+    background-color: var(--branquin);
     margin-left: 0px;
     padding: 10px;
     font-size: 16px;
@@ -137,7 +151,8 @@ footer .action {
     }
 
     .navHome li:hover {
-        background-color: #D9D9D9;
+        background-color: var(--branquin);
+        color: black;
         border-radius: 5px;
         cursor: pointer;
         padding: 10px;
@@ -145,23 +160,23 @@ footer .action {
 
 
     .homeSelect {
-        background-color: #A43039;
+        background-color: var(--verm);
         margin-left: 0px;
         padding: 10px;
         font-size: 16px;
         border-radius: 5px;
         margin-top: 0px;
         padding-top: 0px;
-        color: #F3EDE0;
+        color: var(--branquin);
     }
 
     .sideNav li:hover {
-        background-color: #A43039;
+        background-color: var(--verm);
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
         cursor: pointer;
         padding: 10px;
-        color: #F3EDE0;
+        color: var(--branquin);
     }
 
     .aviso {
@@ -196,9 +211,9 @@ footer .action {
     }
 
     .warnBox {
-        background-color: #ffd3de;
+        background-color: var(--branquin);
         border-style: solid;
-        border-color: #A43039;
+        border-color: var(--verm);
         border-radius: 10px;
         margin-left: 15px;
         padding: 15px;
@@ -231,9 +246,9 @@ footer .action {
 
     .estTitle {
         display: flex;
-        background-color: #A43039;
+        background-color: var(--verm);
         border-radius: 5px;
-        color: #F3EDE0;
+        color: var(--branquin);
         padding: 10px;
         justify-content: space-between;
         justify-content: space-around;
@@ -274,15 +289,30 @@ footer .action {
 
 
 
+
+
 /* LOGIN E CADASTRO */
     /* LOGIN */
     /* CADASTRO */
 
 
 
+
+
+
 /* NOTAS */
 
+
+
+
+
+
 /* AULAS */
+
+
+
+
+
 
 
 
@@ -296,7 +326,7 @@ footer .action {
     border-radius: 50%;
     margin-left: 720px;
     margin-top: 0px;
-    background-color: #A43039;
+    background-color: var(--verm);
 }
 
 .horas {
