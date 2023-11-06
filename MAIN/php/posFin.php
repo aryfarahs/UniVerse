@@ -16,11 +16,11 @@
         <div class="sideNav">
             <nav>
                 <ul>
-                    <li><a href="home.php">&nbsp;HOME</a></li>
-                    <li><a href="aulas.php">&nbsp;MINHAS AULAS</a></li>
-                    <li><a href="notas.php">&nbsp;NOTAS/<br>&nbspFREQUÊNCIA</a></li>
-                    <li><a href="atvComp.php">&nbsp;ATIVIDADES &nbsp;COMPLEMENTARES</a></li>
-                    <li class="sideSelect"><a href="posFin.php">&nbsp;POSIÇÃO &nbsp;FINANCEIRA</a></li>
+                    <a href="home.php"><li>&nbsp;HOME</li></a>
+                    <a href="aulas.php"><li>&nbsp;MINHAS AULAS</li></a>
+                    <a href="notas.php"><li>&nbsp;NOTAS/<br>&nbspFREQUÊNCIA</li></a>
+                    <a href="atvComp.php"><li>&nbsp;ATIVIDADES &nbsp;COMPLEMENTARES</li></a>
+                    <a href="posFin.php"><li class="sideSelect">&nbsp;POSIÇÃO &nbsp;FINANCEIRA</li></a>
                 </ul>
             </nav>
         </div>
