@@ -8,24 +8,19 @@
     <title>UniVerse</title>
 </head>
 <body class="princ">
-    <header>
-        <img src="../images/logo.png" alt="">
-        <h1>UNIVERSE</h1>
-    </header>
+<?php
 
-    <main>
-        <!-- NAVEGAÇÃO LATERAL -->
-        <div class="sideNav">
-            <nav>
-                <ul>
-                    <a href="home.php"><li class="sideSelect">&nbsp;HOME</li></a>
-                    <a href="aulas.php"><li>&nbsp;MINHAS AULAS</li></a>
-                    <a href="notas.php"><li>&nbsp;NOTAS/<br>&nbspFREQUÊNCIA</li></a>
-                    <a href="atvComp.php"><li>&nbsp;ATIVIDADES &nbsp;COMPLEMENTARES</li></a>
-                    <a href="posFin.php"><li>&nbsp;POSIÇÃO &nbsp;FINANCEIRA</li></a>
-                </ul>
-            </nav>
-        </div>
+require_once 'funcoes.php';
+require_once 'header.php';
+
+
+
+
+?>
+
+
+
+
 
 
         <!-- HOME -->

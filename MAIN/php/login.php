@@ -1,73 +1,104 @@
 <!DOCTYPE html>
-<html lang="pt_br">
+<html lang="en">
 <head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/login.css">
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <title>Universe</title>
+	<style>
+
+div.msg {
+    padding: 7px 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    background-color: rgba(226, 239, 218);
+}
+
+div.sucesso {
+    color: rgba(74, 116, 67);
+}
+
+div.aviso {
+    color: rgb(88, 104, 29);
+}
+
+div.erro {
+    color: rgb(138, 53, 53);
+}
+
+
+a {
+	color: black;
+}
+
+
+	</style>
 </head>
 <body>
-    <img src="../images/UniverseVermelho.png" style="width: 20vw; margin: 10px; padding: 0;">
-<div class="container" id="container">
-	<div class="form-container sign-up-container">
-		<form action="#">
-			<h1>Cadastre-se</h1>
-			<div class="social-container">
-				<img src="../images/facebook-app-symbol.png" class="social"><i class="fab fa-facebook-f"></i></img>
-				<img src="../images/google.png" class="social"><i class="fab fa-google-plus-g"></i></i>
-				<img src="../images/microsoft.png" class="social"><i class="fab fa-linkedin-in"></i></img>
-			</div>
-			<span>ou use o email para se cadastrar</span>
-			<input type="text" placeholder="Nome" />
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Senha" />
-			<button><a href="concadastro.php">Cadastrar</a></button>
-		</form>
-	</div>
-	<div class="form-container sign-in-container">
-		<form action="#">
-			<h1>Login</h1>
-			<div class="social-container">
-				<img src="../images/facebook-app-symbol.png" class="social"><i class="fab fa-facebook-f"></i></img>
-				<img src="../images/google.png" class="social"><i class="fab fa-google-plus-g"></i></i>
-				<img src="../images/microsoft.png" class="social"><i class="fab fa-linkedin-in"></i></img>
-			</div>
-			<span>ou use sua conta</span>
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Senha" />
-			<a href="#">Esqueceu sua senha?</a>
-			<button><a href="home.php">Entrar</a></button>
-		</form>
-	</div>
-	<div class="overlay-container">
-		<div class="overlay">
-			<div class="overlay-panel overlay-left">
-				<h1>Bem Vindo de Volta!</h1>
-				<p>Para manter-se conectado, por favor entre com suas informações pessoais </p>
-				<button class="ghost" id="signIn">Login</button>
-			</div>
-			<div class="overlay-panel overlay-right">
-				<h1>Olá, Amigo!</h1>
-				<p>Cadastre-se conosco e vamos trilhar uma jornada juntos!</p>
-				<button class="ghost" id="signUp">Cadastrar-se</button>
-			</div>
-		</div>
-	</div>
-</div>
+
+<?php
+require_once 'funcoes.php';
+
+
+?>
+
+
+
+<?php
+
+$log = $_GET['logout'] ?? null;
+
+if($log == 1){
+	logout();
+}
+
+
+$em = $_POST['email'] ?? null;
+$sen = $_POST['senha'] ?? null;
+
+
+// $em = 'icarolkucha@gmail.com';
+// $sen = "senhaaaforte";
+
+
+
+if($em == null || $sen == null){
+	require 'login-form.php';
+}else{
+
+	$q = "Select usuario, nome, email, senha, tipo from usuarios where email = '$em'";
+	$busca = $banco->query($q);
+	if(!$busca){
+		echo msg_erro('Erro ao acessar o banco');
+	}else{
+		$objAtual = $busca->fetch_object();
+		
+		
+		if($objAtual == null){
+			
+			echo msg_erro('Usuário não encontrado');
+		}else{
+			if(!($sen === $objAtual->senha)){
+				echo msg_erro('Senha errada');
+			}else{
+				$_SESSION['usuario'] = $objAtual->usuario;
+				$_SESSION['nome'] = $objAtual->nome;
+				$_SESSION['email'] = $objAtual->email;
+				$_SESSION['tipo'] = $objAtual->tipo;
+				echo msg_sucesso('Logado com sucesso');
+				echo "<p><a href='home.php'>Clique aqui para acessar a home</a></p>";
+			}
+		}
+	}
+}
+
+
+
+
+?>
+
+
 </body>
 
-
- <script>
-    const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
-
-signUpButton.addEventListener('click', () => {
-	container.classList.add("right-panel-active");
-});
-
-signInButton.addEventListener('click', () => {
-	container.classList.remove("right-panel-active");
-});
- </script>
 </html>
