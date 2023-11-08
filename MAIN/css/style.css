@@ -1,22 +1,19 @@
 /* GERAL */
 
-
-
+* {
+    margin: 0px;
+    padding: 0px;
+}
 
 
 :root{
     --verm: #A43039;
     --branquin: #F3EDE0;
 }
-/* #A43039 */
+    /* #A43039 */
 
 
-
-
-* {
-    margin: 0px;
-    padding: 0px;
-} 
+ 
 
 header {
     background-color: var(--verm);
@@ -356,10 +353,8 @@ footer .action {
         background-color: #A43039;
   }
   
-  .container td:first-child { color: #F3EDE0; }
-  
-  .container tr:hover {
-
+  .container td:first-child { 
+    color: #F3EDE0; 
   }
   
   .container td:hover {
