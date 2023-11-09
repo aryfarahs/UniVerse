@@ -9,6 +9,8 @@
 :root{
     --verm: #A43039;
     --branquin: #F3EDE0;
+    --rosin: #ffd3de;
+    --cinzin: #D9D9D9;
 }
     /* #A43039 */
 
@@ -105,7 +107,7 @@ footer .action {
 }
 
 .sideSelect {
-    background-color: var(--branquin);
+    background-color: var(--rosin);
     margin-left: 0px;
     padding: 10px;
     font-size: 16px;
@@ -148,7 +150,7 @@ footer .action {
     }
 
     .navHome li:hover {
-        background-color: var(--branquin);
+        background-color: var(--cinzin);
         color: black;
         border-radius: 5px;
         cursor: pointer;
@@ -208,7 +210,7 @@ footer .action {
     }
 
     .warnBox {
-        background-color: var(--branquin);
+        background-color: var(--rosin);
         border-style: solid;
         border-color: var(--verm);
         border-radius: 10px;
@@ -237,6 +239,18 @@ footer .action {
     .pagina {
         display: inline-flex   ;
 }
+
+
+
+    /* FACULRIDES */
+
+    .divForm {
+        display: flex;
+        flex-direction: column;
+        width: min-content;
+        margin: auto;
+    }   
+
 
 
     /* PÁGINA ESTÁGIO */
@@ -280,7 +294,7 @@ footer .action {
         margin: 25px;
     }
 
-
+    
 
 /* POSIÇÃO FINANCEIRA */
 
