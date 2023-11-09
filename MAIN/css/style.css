@@ -21,7 +21,32 @@ header {
     background-color: var(--verm);
     padding: 35px;
     margin-bottom: 0px;
+    display: flex;
 }
+
+
+
+.perfil{
+    justify-content: right;
+    text-align: right;
+    width: 100%;
+    /* background-color: aquamarine; */
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+.material-symbols-outlined{
+    /* padding-top: 5px;
+    background-color: rgb(39, 79, 189); */
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.logout{
+    font-size: 15px;
+}
+    
 
 header > h1 {
     display: inline-block;
