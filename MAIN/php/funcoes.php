@@ -20,6 +20,7 @@ if(!(isset($_SESSION['usuario']))){
 
 
 
+
 function msg_erro($msg){
 return "<div class='msg erro'><span class='material-symbols-outlined'>error</span>$msg</div>";
 };
