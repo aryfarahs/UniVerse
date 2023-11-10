@@ -141,7 +141,13 @@ footer .action {
 
 }
 
-/* PÁGINA HOME */
+/* HOME */
+    /* PÁGINA HOME */
+
+    .iconInsta {
+        width: 50px;
+    }
+
     /* PAGINA AVISOS */
 
     .navHome {
@@ -270,9 +276,9 @@ footer .action {
     /* FACULRIDES */
 
     .divForm {  
-        margin-left: 30px;
-        margin-top: 100px;
-        height: 120px; 
+        margin-left: 80px;
+        margin-top: 80px;
+        height: 180px; 
         background-color: var(--rosin);
         border: solid;
         border-color: var(--verm);
@@ -288,6 +294,10 @@ footer .action {
         flex-direction: column;
         justify-content: space-evenly;
         align-items: start;
+    }
+
+    .label {
+        font-family: 'Lato', sans-serif;
     }
 
     .inputFaculRides {
