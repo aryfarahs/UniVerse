@@ -280,20 +280,22 @@ footer .action {
     .divForm {  
         margin-left: 80px;
         margin-top: 80px;
-        height: 180px; 
+        width: 500px;
+        height: 200px; 
         background-color: var(--rosin);
         border: solid;
         border-color: var(--verm);
         border-radius: 10px;
         display: flex;
+        
         justify-content: center;
-        padding: 10px 20px;
+        padding: 5px 10px;
+        font-family: 'Lato', sans-serif;
+        /* background-color: aqua; */
     }   
 
-    .inputForm {
-        display: flex;
-    }
 
+    
     .formFaculRides {
         height: 100%;
         display: flex;
@@ -302,15 +304,64 @@ footer .action {
         align-items: start;
     }
 
-    .label {
-        font-family: 'Lato', sans-serif;
+
+
+    .info_endereco {
+        display: flex;
+        justify-content: space-around;
+        
+        width: 100%;
+        height: 70%;
+
     }
 
-    .inputFaculRides {
-        width: 700px;
-        padding: 5px;
-        border-radius: 5px;
+
+    .labels_endereco {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-around;
     }
+
+    .inputs_endereco {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+        width: min-content;
+        /* background-color: brown; */
+        width: 70%;
+    }
+
+    .inputs_endereco > input {
+        width: 100%;
+        border-radius: 5px;
+        border: 0px;    
+        height: 18%;
+        box-sizing: border-box;
+        padding-left: 10px;
+
+        &:focus{
+            outline: 1px solid var(--verm);
+            
+        }
+    }
+
+
+    .checkbox_termos{
+        width: 100%;
+        /* background-color: cadetblue; */
+        box-sizing: border-box;
+        padding-left: 20px;
+        margin: 10px 0px;
+
+    }
+
+
+
+
+
+    
 
 
 

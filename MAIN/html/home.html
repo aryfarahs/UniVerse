@@ -123,30 +123,34 @@
             <div class="divForm">
                 <form class="formFaculRides" action="" id="frForm">
                     
-                    <section>
-                        <label class="label" for="frRua">Rua:</label>
-                        <div class="inputForm">
-                            <input class="inputFaculRides" type="text" name="frRua" id="idfrRua">
-                        </div>  
-                    </section> 
-                    <section>
-                        <label class="label" for="frNum">Número:</label>
-                        <input class="inputFaculRides" type="text" name="frNum" id="idfrNum">
-                    </section> 
-                    <section>
-                        <label class="label" for="frComp">Complemento:</label>
-                        <input class="inputFaculRides" type="text" name="frComp" id="idfrComp">
-                    </section>
-                    <section>
-                        <label class="label" for="frRef">Referência:</label>
-                        <input class="inputFaculRides" type="text" name="frRef" id="idfrRef">
-                    </section> 
+                    <div class="info_endereco">
 
 
-                    <section style="margin-top: 10px;">
+                        <div class="labels_endereco">
+                            <label for="frRua">Rua:</label>
+                            <label for="frNum">Número:</label>
+                            <label for="frComp">Complemento:</label>
+                            <label for="frRef">Referência:</label>
+                        </div>
+
+
+
+                        <div class="inputs_endereco">
+                            <input type="text" name="frRua" id="idfrRua" placeholder="Av. Iguaçu meu pau no seu cu">
+                            <input type="text" name="frNum" id="idfrNum" placeholder="2042">
+                            <input type="text" name="frComp" id="idfrComp" placeholder="Ap 203">
+                            <input type="text" name="frRef" id="idfrRef" placeholder="Próximo a farmácia Nissei">
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="checkbox_termos">
                         <input type="checkbox" name="frConc" id="idfrConc" >
                         <label class="label" for="frConc">Declaro que estou de acordo com a utilização do meu endereço para localizar estudantes da minha região.</label>
-                    </section>
+                    </div>
+
                 </form>
             </div>
 
