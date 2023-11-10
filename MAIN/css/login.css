@@ -56,6 +56,10 @@ button {
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	transition: transform 80ms ease-in;
+	&:hover {
+		cursor: pointer;
+		background-color: #88222b;
+	}
 }
 
 button:active {
@@ -69,6 +73,10 @@ button:focus {
 button.ghost {
 	background-color: transparent;
 	border-color: #F3EDE0;
+	&:hover {
+		cursor: pointer;
+		background-color: #88222b;
+	}
 }
 
 form {

@@ -145,9 +145,8 @@ footer .action {
     /* PÁGINA HOME */
 
     .iconInsta {
-        width: 50px;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         margin: 50px;
     }
 
@@ -290,6 +289,11 @@ footer .action {
         justify-content: center;
         padding: 10px 20px;
     }   
+
+    .inputForm {
+        display: flex;
+        justify-content: end;
+    }
 
     .formFaculRides {
         height: 100%;
