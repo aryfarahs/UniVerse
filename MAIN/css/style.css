@@ -598,17 +598,15 @@ footer .action {
 
 .compGraph {
     display: flex;
-
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    margin-left: 720px;
-    margin-top: 0px;
+    height: 0.5%;
+    width: 70%;
+    border-radius: 5px;
+    margin: auto;
     background-color: var(--verm);
 }
 
 .horas {
-    margin-top: 210px;
+    margin-top: 20px;
     font-weight: bolder;
     font-size: 18px;
     text-align: center;
