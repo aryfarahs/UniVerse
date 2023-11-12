@@ -32,7 +32,24 @@ function revealTxt(id) {
 
 }
 
+
+
+
+
+
+// FACULRIDES
+function tirablur(id) {
+  const blur = document.getElementById(id)
+  blur.classList.remove('blur')
+}
+
+
+
+
 // ESTÁGIO
+
+
+
 
 
 
