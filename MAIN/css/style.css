@@ -517,6 +517,14 @@ footer .action {
 
 /* NOTAS */
 
+.containerN {
+    display: inline-flex;
+    margin-top: 20px;
+    margin-left: 250px;
+    position: absolute;
+    font-family: 'Courier New', Courier, monospace;
+    width: 1200px;
+}
 
   h2 a {
     font-weight: 700;
@@ -545,10 +553,8 @@ footer .action {
   .notas {
         text-align: left;
         overflow: hidden;
-        margin: 0 auto;
         display: table;
-        padding: 0 0 8em 0;
-        width: 70%;
+        width: 80%;
   }
   
   .notas td, .notas th {
@@ -597,17 +603,34 @@ footer .action {
 /* ATIVIDADES COMPLEMENTARES */
 
 .compGraph {
-    display: flex;
-    height: 0.5%;
-    width: 70%;
-    border-radius: 5px;
-    margin: auto;
+    display: inline-flex;
+    height: 2%;
+    width: 50%;
+    position: absolute;
+    border-radius: 10px 0px 0px 10px;
+    margin-top: 80px;
+    margin-left: 250px;
+    border: 3px solid var(--verm);
     background-color: var(--verm);
 }
 
-.horas {
-    margin-top: 20px;
-    font-weight: bolder;
-    font-size: 18px;
-    text-align: center;
+.incompGraph {
+    display: inline-flex;
+    height: 2%;
+    width: 20%;
+    position: absolute;
+    border: 3px solid var(--verm);
+    border-radius: 0px 10px 10px 0px;
+    margin-top: 80px;
+    margin-left: 950px;
 }
+
+.horas {
+    display: inline-flex;
+    margin-top: 77px;
+    margin-left: 1270px;
+    position: absolute;
+    font-weight: bolder;
+    color: var(--verm) ;
+}
+
