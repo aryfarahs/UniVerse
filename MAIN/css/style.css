@@ -187,6 +187,7 @@ footer .action {
 
     .navHome {
         display: flex;
+        justify-content: space-between;
         margin-top: 0px;
         padding: 0px;
     }
@@ -229,7 +230,7 @@ footer .action {
         margin-left: 0px;
         padding: 10px;
         font-size: 16px;
-        border-radius: 5px;
+        border-radius: 15px;
         margin-top: 0px;
         padding-top: 0px;
         color: var(--branquin);
@@ -519,7 +520,7 @@ footer .action {
 
 .containerN {
     display: inline-flex;
-    margin-top: 20px;
+    margin-top: 50px;
     margin-left: 250px;
     position: absolute;
     font-family: 'Courier New', Courier, monospace;
@@ -554,7 +555,7 @@ footer .action {
         text-align: left;
         overflow: hidden;
         display: table;
-        width: 80%;
+        width: 90%;
   }
   
   .notas td, .notas th {
@@ -607,7 +608,7 @@ footer .action {
     height: 2%;
     width: 50%;
     position: absolute;
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 10px;
     margin-top: 80px;
     margin-left: 250px;
     border: 3px solid var(--verm);
@@ -617,20 +618,107 @@ footer .action {
 .incompGraph {
     display: inline-flex;
     height: 2%;
-    width: 20%;
+    width: 70%;
     position: absolute;
     border: 3px solid var(--verm);
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 10px;
     margin-top: 80px;
-    margin-left: 950px;
+    margin-left: 250px;
 }
 
 .horas {
     display: inline-flex;
     margin-top: 77px;
-    margin-left: 1270px;
+    margin-left: 1320px;
     position: absolute;
     font-weight: bolder;
     color: var(--verm) ;
 }
 
+.containerATV {
+    display: inlin-flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: 'Courier New', Courier, monospace;
+    width: 80%;
+    margin-left: 14%;
+    position: absolute;
+    margin-top: 180px;
+}
+
+.navATV {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navATV a {
+    display: inline-flex;
+    justify-content: space-evenly;
+    width: 390px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.navATV ul {
+    list-style-type: none;
+    margin: 10px;
+    padding: 10px;
+    display: inline-flex;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.navATV li {
+    list-style-type: none;
+    margin: 10px;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding: 10px;
+    display: flex;
+    width: 350px;
+    justify-content: space-evenly;
+}
+
+.navATV li:hover {
+    background-color: var(--cinzin);
+    color: black;
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.atvBox {
+    background-color: var(--rosin);
+    border: solid var(--verm);
+    border-radius: 10px;
+    margin: auto;
+    width: 900px;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.atv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 0.1px solid var(--verm);
+    padding: 20px;
+}
+
+.atvHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--verm);
+    color: var(--branquin);
+    border: 0.1px solid var(--verm);
+    padding: 15px;
+}
+
+.atvFooter {
+    padding: 2px;
+    background-color: var(--verm);
+    border: 0.1px solid var(--verm);
+}

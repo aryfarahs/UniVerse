@@ -38,7 +38,7 @@ function revealTxt(id) {
 
 
 // FACULRIDES
-function tirablur(id) {
+function tirablur(id, pag) {
   const blur = document.getElementById(id)
   blur.classList.remove('blur')
 }
