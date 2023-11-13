@@ -130,12 +130,11 @@
                 <div class="sem_nome">
                     <table class="atvBox">
                         <thead>
-                            <tr class="atvHeader">
+                            <tr class="atvHeader" style="justify-content: space-around">
                                 <td><h4>Nome</h4></td>
                                 <td><h4>Descrição</h4></td>
                                 <td><h4>Tipo</h4></td>
                                 <td><h4>Horas</h4></td>
-                                <td><h4></h4></td>
                             </tr>
                         </thead>
                         
@@ -143,7 +142,14 @@
                             <!-- ID INT PRIMARY KEY AUTO INCREMENT -->
                             <td><input type="text" class="input_atv" required></td>
                             <td><input type="text" class="input_atv" required></td>
-                            <td><input type="text" class="input_atv" required></td>
+                            <td>
+                                <select name="tipo" id="idtipo" class="input_atv" required>
+                                    <option value="--"></option>
+                                    <option value="palestra">Palestra</option>
+                                    <option value="Workshop">Workshop</option>
+                                    <option value="tv">Trabalho Voluntário</option>
+                                </select>
+                             </td>
                             <td><input type="number" class="input_atv" required></td>
                         </tr>
 
@@ -173,7 +179,7 @@
                         </tfoot>
                     </table>
                 </div>
-                
+
                     <input class="atvSubmit" type="submit" name="atvSub" id="idatvSub">
                 
             </form>
