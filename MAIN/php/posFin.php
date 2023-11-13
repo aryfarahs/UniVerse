@@ -31,7 +31,7 @@ require_once 'funcoes.php';
 
     <main>
         <div class="sideNav">
-            <nav>
+        <nav>
                 <ul>
                     <a href="home.php"><li>&nbsp;HOME</li></a>
                     <a href="aulas.php"><li>&nbsp;MINHAS AULAS</li></a>
@@ -45,128 +45,151 @@ require_once 'funcoes.php';
         
         <div class="containerPOS" >
 
-            <div class="semestre" onclick="revealTxt('sem2')">2º SEMESTRE</div>
+
+            <div class="tabelinhasui">
+                <div class="semestre">
+                    <h4>1º SEMESTRE</h4>
+                </div>
+                <div class="semestre">
+                    <h4>2º SEMESTRE</h4>
+                </div>
+            </div>
             
-            <!-- 2º SEMESTRE -->
-            <div class="atvBox" id="sem2">
+            <div class="tabelinhasui">
+                
+                
+                <!-- PRIMEIRO SEMESTRE-->
+                
+                <table class="posBox" id="sem1">
 
-                <div class="atvHeader">
-                    <h4>Data</h4>
-                    <h4>Valor</h4>
-                    <h4>Imprimir</h4>
-                    <h4>Status</h4>
-                </div>
-                
-                <div class="atv">
-                    <p>06/12/2023</p>
-                    <p>R$2.050,00</p>
-                    <img src="../images/impressora.png" width="30px">
-                    <p>Pago</p>
-                </div>
-                
-                <div class="atv">
-                    <p>06/11/2023</p>
-                    <p>R$2.050,00</p>
-                    <img src="../images/impressora.png" width="30px">
-                    <p>Pago</p>
-                </div>
+                    <thead>
+                        <tr class="atvHeader">
+                            <td><h4>Data</h4></td>
+                            <td><h4>Valor</h4></td>
+                            <td><h4>Imprimir</h4></td>
+                            <td><h4>Status</h4></td>
+                        </tr>
+                    </thead>
 
-                <div class="atv">
-                    <p>06/10/2023</p>
-                    <p>R$2.050,00</p>
-                    <img src="../images/impressora.png" width="30px">
-                    <p>Pago</p>
-                </div>
-                
-                <div class="atv">
-                    <p>06/09/2023</p>
-                    <p>R$2.050,00</p>
-                    <img src="../images/impressora.png" width="30px">
-                    <p>Pago</p>
-                </div>
-                
-                
-                <div class="atv">
-                    <p>06/08/2023</p>
-                    <p>R$2.050,00</p>
-                    <img src="../images/impressora.png" width="30px">
-                    <p>Pago</p>
-                </div>
-                
-                <div class="atv">
-                    <p>06/07/2023</p>
-                    <p>R$2.050,00</p>
-                    <img src="../images/impressora.png" width="30px">
-                    <p>Pago</p>
-                </div>
+                    <tbody>
+                        <tr class="atv">
+                            <td><p>06/01/2023</p></td>
+                            <td><p>R$2.050,00</p></td>
+                            <td><img src="../images/comprovante.png" width="30px"></td>
+                            <td><p>Pago</p></td>
+                        </tr>
+                        
+                        <tr class="atv">
+                            <td><p>06/02/2023</p></td>
+                            <td><p>R$2.050,00</p></td>
+                            <td><img src="../images/comprovante.png" width="30px"></td>
+                            <td><p>Pago</p></td>
+                        </tr>
 
-                <div class="atvFooter">
-                </div>
+                        <tr class="atv">
+                            <td><p>06/03/2023</p></td>
+                            <td><p>R$2.050,00</p></td>
+                            <td><img src="../images/comprovante.png" width="30px"></td>
+                            <td><p>Pago</p></td>
+                        </tr>
+                        
+                        <tr class="atv">
+                            <td><p>06/04/2023</p></td>
+                            <td><p>R$2.050,00</p></td>
+                            <td><img src="../images/comprovante.png" width="30px"></td>
+                            <td><p>Pago</p></td>
+                        </tr>
+                        
+                        
+                        <tr class="atv">
+                            <td><p>06/05/2023</p></td>
+                            <td><p>R$2.050,00</p></td>
+                            <td><img src="../images/comprovante.png" width="30px"></td>
+                            <td><p>Pago</p></td>
+                        </tr>
+                        
+                        <tr class="atv">
+                            <td><p>06/06/2023</p></td>
+                            <td><p>R$2.050,00</p></td>
+                            <td><img src="../images/comprovante.png" width="30px"></td>
+                            <td><p>Pago</p>
+                        </tr>
+                    </tbody>
+                        
+                    <tfoot>
+                        <tr class="atvFooter">
+                            <td>&nbsp;</td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+                <!-- 2º SEMESTRE -->
+                <table class="posBox" id="sem2">
+
+                    <thead>
+                        <tr class="atvHeader">
+                            <td><h4>Data</h4></td>
+                            <td><h4>Valor</h4></td>
+                            <td><h4>Imprimir</h4></td>
+                            <td><h4>Status</h4></td>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        
+                        <tr class="atv">
+                            <td><p>06/07/2023</p></td>
+                            <td><p>R$2.050,00</p></td>
+                            <td><img src="../images/comprovante.png" width="30px"></td>
+                            <td><p>Pago</p></td>
+                        </tr>
+
+                        <tr class="atv">
+                            <td><p>06/08/2023</p></td>
+                            <td><p>R$2.050,00</p></td>
+                            <td><img src="../images/comprovante.png" width="30px"></td>
+                            <td><p>Pago</p></td>
+                        </tr>
+                        
+                        <tr class="atv">
+                            <td><p>06/09/2023</p></td>
+                            <td><p>R$2.050,00</p></td>
+                            <td><img src="../images/comprovante.png" width="30px"></td>
+                            <td><p>Pago</p></td>
+                        </tr>
+                        
+                        
+                        <tr class="atv">
+                            <td><p>06/10/2023</p></td>
+                            <td><p>R$2.050,00</p></td>
+                            <td><img src="../images/comprovante.png" width="30px"></td>
+                            <td><p>Pago</p></td>
+                        </tr>
+                        
+                        <tr class="atv">
+                            <td><p>06/11/2023</p></td>
+                            <td><p>R$2.050,00</p></td>
+                            <td><img src="../images/comprovante.png" width="30px"></td>
+                            <td><p>Pago</p></td>
+                        </tr>
+
+                        <tr class="atv" style="padding: 20px;">
+                            <td><p>06/12/2023</p></td>
+                            <td><p>R$2.050,00</p></td>
+                            <td><img src="../images/impressora.png" width="20.2px"></td>
+                            <td><p>Em espera</p></td>
+                        </tr>
+
+                    </tbody>
+                    
+                    <tfoot>
+                        <tr class="atvFooter">
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                    
+                </table>
             </div>
-        
-
-            <!-- PRIMEIRO SEMESTRE-->
-            <div class="semestre" onclick="revealTxt('sem1')">1º SEMESTRE</div>
-
-            <div class="atvBox" id="sem1">
-
-                <div class="atvHeader">
-                    <h4>Data</h4>
-                    <h4>Valor</h4>
-                    <h4>Imprimir</h4>
-                    <h4>Status</h4>
-                </div>
-                
-                <div class="atv">
-                    <p>06/06/2023</p>
-                    <p>R$2.050,00</p>
-                    <img src="../images/impressora.png" width="30px">
-                    <p>Pago</p>
-                </div>
-                
-                <div class="atv">
-                    <p>06/05/2023</p>
-                    <p>R$2.050,00</p>
-                    <img src="../images/impressora.png" width="30px">
-                    <p>Pago</p>
-                </div>
-
-                <div class="atv">
-                    <p>06/04/2023</p>
-                    <p>R$2.050,00</p>
-                    <img src="../images/impressora.png" width="30px">
-                    <p>Pago</p>
-                </div>
-                
-                <div class="atv">
-                    <p>06/03/2023</p>
-                    <p>R$2.050,00</p>
-                    <img src="../images/impressora.png" width="30px">
-                    <p>Pago</p>
-                </div>
-                
-                
-                <div class="atv">
-                    <p>06/02/2023</p>
-                    <p>R$2.050,00</p>
-                    <img src="../images/impressora.png" width="30px">
-                    <p>Pago</p>
-                </div>
-                
-                <div class="atv">
-                    <p>06/01/2023</p>
-                    <p>R$2.050,00</p>
-                    <img src="../images/impressora.png" width="30px">
-                    <p>Pago</p>
-                </div>
-                
-                
-
-                <div class="atvFooter">
-                </div>
-
-            </div>
-
         </div>
 
     </main>
