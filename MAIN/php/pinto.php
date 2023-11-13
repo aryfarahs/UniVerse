@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/javascript.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <title>UniVerse</title>
 </head>
 <body class="princ">
 <?php
 require_once 'funcoes.php';
-ob_start()
 
 ?>
     <header>
@@ -62,71 +60,79 @@ ob_start()
             </div>
 
             <table class="atvBox">
+
+                <thead>
+                    <tr class="atvHeader">
+                        <td><h4>ID</h4></td>
+                        <td><h4>Nome</h4></td>
+                        <td><h4>Grupo</h4></td>
+                        <td><h4>Tipo</h4></td>
+                        <td><h4>Horas</h4></td>
+                        <td><h4>Posição</h4></td>
+                    </tr>
+                </thead>
                 
-                <?php
-                    $nomeatual = $_SESSION['nome'];
-                    $pesq = $banco->query(" Select a.id, a.nome, a.grupo, a.tipo, a.horas, a.posicao from atividade AS a
-                    INNER JOIN usuarios AS u ON (a.fk_id_usuario = u.id)
-                    WHERE u.nome LIKE '$nomeatual'
-                    ORDER BY a.nome");
-                    
-                    
-                    
-                    echo "<thead>";
-                    echo "<tr class='atvHeader'>";
-                    echo "<td><h4>ID</h4></td>";
-                    echo "<td><h4>Nome</h4></td>";
-                    echo "<td><h4>Grupo</h4></td>";
-                    echo "<td><h4>Tipo</h4></td>";
-                    echo "<td><h4>Horas</h4></td>";
-                    echo "<td><h4>Posição</h4></td>";
-                    echo "<tr>";
-                    echo "</thead>";
-                    
-                    
-                    $qtdLinha = $pesq->num_rows;
-                    if($qtdLinha != 0){
-                    
-                        echo "<tbody>";
-                        for($i = 1; $i <= $qtdLinha; $i++){
-                            
-                            $objAtual = $pesq->fetch_object();
-                            
-                            
-                            echo "<tr class='atv'>";
-                            echo "<td>$objAtual->id</td>";
-                            echo "<td>$objAtual->nome</td>";
-                            echo "<td>$objAtual->grupo</td>";
-                            echo "<td>$objAtual->tipo</td>";
-                            echo "<td>$objAtual->horas</td>";
-                            echo "<td>$objAtual->posicao</td>";
-                            echo "</tr>";
-                            
-                        };
-                        echo "</tbody>";
-                    }else {
-                        echo "<tr class='atv'>";
-                        echo "<td colspan='6'>Voce ainda não inseriu nenhuma atividade complementar</td>";
-                        echo "</tr>";
-                    }
-                    
-                    ?>
-                    <tfoot>
-                        <tr class="atvFooter">
-                            <td>&nbsp;</td>
-                        </tr>
-                    </tfoot>
+                <tr class="atv">
+                    <td>001</td>
+                    <td>Ideathon</td>
+                    <td>PUCPR</td>
+                    <td>Workshop</td>
+                    <td>5</td>
+                    <td>Em Análise</td>
+                </tr>
 
-</table>            
+                <tr class="atv">
+                    <td>002</td>
+                    <td>Creche Feliz</td>
+                    <td>Bom Guri</td>
+                    <td>Workshop</td>
+                    <td>5</td>
+                    <td>Aprovado</td>
+                </tr>
+                
+                <tr class="atv">
+                    <td>003</td>
+                    <td>Memória no Asilo</td>
+                    <td>Viver Bem</td>
+                    <td>Trabalho Voluntário</td>
+                    <td>10</td>
+                    <td>Em Análise</td>
+                </tr>
 
-</div>
+                <tr class="atv">
+                    <td>004</td>
+                    <td>Coleta de Lixo</td>
+                    <td>SLU</td>
+                    <td>Trabalho Voluntário</td>
+                    <td>10</td>
+                    <td>Aprovado</td>
+                </tr>
 
+                <tr class="atv">
+                    <td>005</td>
+                    <td>AI: O Futuro?</td>
+                    <td>PUCPR</td>
+                    <td>Palestra</td>
+                    <td>2</td>
+                    <td>Aprovado</td>
+                </tr>
+                
+                <tfoot>
+                    <tr class="atvFooter">
+                        <td>&nbsp;</td>
+                    </tr>
+                </tfoot>
 
-<!-- ENVIAR -->       
-<div class="subpagina containerATV" id="idATVE">
-    
-    <div class="navATV">
-        <nav>
+            </table>            
+
+        </div>
+        
+
+        <!-- ENVIAR -->       
+        <div class="subpagina containerATV" id="idATVE">
+
+            <div class="navATV">
+                <nav>
                     <ul>
                         <a onclick="showPage('idATVM')"><li>MINHAS ATIVIDADES</li></a>
                         <a><li class="homeSelect">ENVIAR ATIVIDADE</li></a>
@@ -135,15 +141,13 @@ ob_start()
                 </nav>
             </div>
 
-            
-
-            <form class="formFaculRides" action=<?php echo $_SERVER['PHP_SELF'];?> method="post">
+            <form class="formFaculRides" action="">
                 <div class="sem_nome">
                     <table class="atvBox">
                         <thead>
                             <tr class="atvHeader">
                                 <td><h4>Nome</h4></td>
-                                <td><h4>Grupo</h4></td>
+                                <td><h4>Descrição</h4></td>
                                 <td><h4>Tipo</h4></td>
                                 <td><h4>Horas</h4></td>
                                 <td><h4></h4></td>
@@ -152,10 +156,10 @@ ob_start()
                         
                         <tr class="atv">
                             <!-- ID INT PRIMARY KEY AUTO INCREMENT -->
-                            <td><input type="text" class="input_atv" name="nomeatv" required></td>
-                            <td><input type="text" class="input_atv" name="grupoatv" required></td>
-                            <td><input type="text" class="input_atv" name="tipoatv" required></td>
-                            <td><input type="number" class="input_atv" name="horasatv" required></td>
+                            <td><input type="text" class="input_atv" required></td>
+                            <td><input type="text" class="input_atv" required></td>
+                            <td><input type="text" class="input_atv" required></td>
+                            <td><input type="number" class="input_atv" required></td>
                         </tr>
 
 
@@ -174,7 +178,7 @@ ob_start()
                         </thead>
 
                         <tr class="atv">
-                            <td><input type="file"></td>
+                            <td><input type="file" required></td>
                         </tr>
 
                         <tfoot>
@@ -185,48 +189,9 @@ ob_start()
                     </table>
                 </div>
                 
-                  <button class="atvSubmit" type="submit" name="atvSub" id="idatvSub">Enviar</button>  
-
-                
-
-                   
-            <?php
-
-                    $nomeatv = $_POST['nomeatv'] ?? null;
-                    $grupoatv = $_POST['grupoatv'] ?? null;
-                    $tipoatv = $_POST['tipoatv'] ?? null;
-                    $horasatv = $_POST['horasatv'] ?? null;
-                    
-                    if($nomeatv !== null && $grupoatv !== null && $tipoatv !== null && $horasatv !== null){
-                        
-                        $nomeatual = $_SESSION['nome'];
-                        $idAtual = $banco->query("Select id from usuarios WHERE nome LIKE '$nomeatual'")->fetch_object()->id;
-                        
-                        
-                        $banco->query("Insert into atividade(nome, grupo, tipo, horas, posicao, fk_id_usuario) VALUES
-                        ('$nomeatv', '$grupoatv', '$tipoatv', $horasatv, 'Em Análise', $idAtual)");
-                        
-                        
-                        
-                        $_POST['nomeatv'] = null;
-                        $_POST['grupoatv'] = null;
-                        $_POST['tipoatv'] = null;
-                        $_POST['horasatv'] = null;
-
-                        header('Location: atvComp.php');
-                        exit;
-                    }
-
-            
-            ?>
+                    <input class="atvSubmit" type="submit" name="atvSub" id="idatvSub">
                 
             </form>
-            
-        
-
-
-
-
 
         </div>
 
@@ -244,7 +209,7 @@ ob_start()
                 </nav>
             </div>
 
-            <form class="formFaculRides" action=<?php echo $_SERVER['PHP_SELF'];?> method="post">
+            <form class="formFaculRides" action="">
                 <table class="atvBox">
                     <thead>
                         <tr class="atvHeader">
@@ -256,7 +221,7 @@ ob_start()
                     
                     <tr class="atv">
                         <!-- ID INT PRIMARY KEY AUTO INCREMENT -->
-                        <td><input type="text" class="input_atv" name="idatv" required></td>
+                        <td><input type="text" class="input_atv" required></td>
                         <td><input type="number" class="input_atv" required></td>
                         <td><input type="checkbox" class="anex" required></td>
                     </tr>
@@ -269,22 +234,6 @@ ob_start()
                 </table>
 
                 <input class="atvSubmit" type="submit" name="atvDel" id="idatvDel">
-                <?php
-
-                    $idatv = $_POST['idatv'] ?? null;
-                    
-                    if($idatv !== null){
-                        
-                        $nomeatual = $_SESSION['nome'];
-                        $idAtual = $banco->query("Select id from usuarios WHERE nome LIKE '$nomeatual'")->fetch_object()->id;
-                        
-                        
-                        $banco->query("Delete from atividade WHERE fk_id_usuario = $idAtual AND id = $idatv");
-
-                        header('Location: atvComp.php');
-                        exit;
-                    }
-            ?>
             </form>
         </div>
         
