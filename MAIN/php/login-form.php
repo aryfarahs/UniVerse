@@ -32,7 +32,7 @@ require_once 'funcoes.php';
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
-        <form action="login.php" method="post">
+        <form action="index.php" method="post">
 			<h1>Aluno</h1>
 			<div class="social-container">
 				<img src="../images/microsoft.png" class="social"><i class="fab fa-linkedin-in"></i></img>

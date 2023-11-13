@@ -24,7 +24,7 @@ ob_start()
             }else{
 
                 echo "Olá, " . $_SESSION['nome'] . "   <abbr title='Perfil'><span class='material-symbols-outlined'>person</span></abbr>";
-                echo '<br><br><p class="logout"><a href="login.php?logout=1">Sair</a></p>';
+                echo '<br><br><p class="logout"><a href="index.php?logout=1">Sair</a></p>';
             }
             ?>
         </div>
