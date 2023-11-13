@@ -5,12 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/javascript.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <title>UniVerse</title>
 </head>
 <body class="princ" >
+
+<?php
+require_once 'funcoes.php';
+
+?>
     <header>
         <img src="../images/logo.png" alt="">
         <h1>UNIVERSE</h1>
+        <div class="perfil">
+            <?php
+            if(!($_SESSION['usuario'])){
+                echo 'entrar';
+            }else{
+
+                echo "Olá, " . $_SESSION['nome'] . "   <abbr title='Perfil'><span class='material-symbols-outlined'>person</span></abbr>";
+                echo '<br><br><p class="logout"><a href="login.php?logout=1">Sair</a></p>';
+            }
+            ?>
+        </div>
     </header>
     
     <main id="notasfreq">
@@ -26,11 +43,46 @@
             </nav>
         </div>
         
-        <div class="tabela-container">
-            <h1>Notas e Frequência</h1>
-            <!-- <table id="tabela"></table>
-                <script src="../js/notas.js"></script> -->
-            <table id="tabela-notas"></table>
+        <div class="containerN">
+            <table class="notas">
+            <?php
+                    $nomeatual = $_SESSION['nome'];
+                    $pesq = $banco->query("Select mu.id, u.nome, m.materia, mu.frequencia, mu.nota, m.carga FROM materia_usuario AS mu 
+                                            INNER JOIN usuarios AS u ON (mu.id_usuario = u.id)
+                                            INNER JOIN materias AS m ON (mu.id_materia = m.id)
+                                            WHERE u.nome LIKE '$nomeatual'");
+
+
+                    $qtdLinha = $pesq->num_rows;
+                    
+                    echo "<thead>";
+                        echo "<tr>";
+                            echo "<th><h1>Matérias</h1></th>";
+                            echo "<th><h1>Nota</h1></th>";
+                            echo "<th><h1>Frequência</h1></th>";
+                        echo "<tr>";
+                    echo "</thead>";
+
+                    
+                
+                    echo "<tbody>";
+                    for($i = 1; $i <= $qtdLinha; $i++){
+
+                        $objAtual = $pesq->fetch_object();
+                       
+
+                        echo "<tr>";
+                           echo "<td>$objAtual->materia</td>";
+                           echo "<td>$objAtual->nota</td>";
+                           echo "<td>% $objAtual->frequencia</td>";
+                        echo "</tr>";
+
+                    };
+                    echo "</tbody>";
+                
+                ?>
+            </table>
+
         </div>
     </main>
 

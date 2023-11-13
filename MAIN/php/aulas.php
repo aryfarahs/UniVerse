@@ -4,69 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/javascript.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <title>UniVerse</title>
 </head>
 <body class="princ">
+
+<?php
+require_once 'funcoes.php';
+
+?>
     <header>
         <img src="../images/logo.png" alt="">
         <h1>UNIVERSE</h1>
-    </header>
+        <div class="perfil">
+            <?php
+            if(!($_SESSION['usuario'])){
+                echo 'entrar';
+            }else{
 
-    <?php
-    
-    require_once 'funcoes.php';
-    
-    
-    
-    ?>
+                echo "Olá, " . $_SESSION['nome'] . "   <abbr title='Perfil'><span class='material-symbols-outlined'>person</span></abbr>";
+                echo '<br><br><p class="logout"><a href="login.php?logout=1">Sair</a></p>';
+            }
+            ?>
+        </div>
+    </header>
 
     <main>
         <div class="sideNav">
             <nav>
                 <ul>
-                    <li><a href="home.php">&nbsp;HOME</a></li>
-                    <li class="sideSelect"><a href="aulas.php">&nbsp;MINHAS AULAS</a></li>
-                    <li><a href="notas.php">&nbsp;NOTAS/<br>&nbspFREQUÊNCIA</a></li>
-                    <li><a href="atvComp.php">&nbsp;ATIVIDADES &nbsp;COMPLEMENTARES</a></li>
-                    <li><a href="posFin.php">&nbsp;POSIÇÃO &nbsp;FINANCEIRA</a></li>
+                    <a href="home.php"><li>&nbsp;HOME</li></a>
+                    <a href="aulas.php"><li class="sideSelect">&nbsp;MINHAS AULAS</li></a>
+                    <a href="notas.php"><li>&nbsp;NOTAS/<br>&nbspFREQUÊNCIA</li></a>
+                    <a href="atvComp.php"><li>&nbsp;ATIVIDADES &nbsp;COMPLEMENTARES</li></a>
+                    <a href="posFin.php"><li>&nbsp;POSIÇÃO &nbsp;FINANCEIRA</li></a>
                 </ul>
             </nav>
         </div>
-        <div class="tabela-container">
-            <h1>Aulas e carga horária</h1>
-            <!-- <table id="tabela"></table>
-            <script src="../js/notas.js"></script> -->
-            <table id="tabela-aulas">
-                <?php
-                    $pesq = $banco->query("select * from materias;");
+
+        <div class="containerN">
+            <table class="notas">
+            <?php
+                    // $pesq = $banco->query("select * from materias;");
+
+
+
+                    $nomeatual = $_SESSION['nome'];
+                    // echo $nomeatual;
+                    $pesq = $banco->query("Select mu.id, u.nome, m.materia, mu.frequencia, mu.nota, m.carga FROM materia_usuario AS mu 
+                                            INNER JOIN usuarios AS u ON (mu.id_usuario = u.id)
+                                            INNER JOIN materias AS m ON (mu.id_materia = m.id)
+                                            WHERE u.nome LIKE '$nomeatual'");
+
+
+
+
+
                     $qtdLinha = $pesq->num_rows;
                     
-                    echo "<tr>";
-                    echo "<td>Matérias</td>";
-                    echo "<td>Carga horária</td>";
-                    echo "<tr>";
+                    echo "<thead>";
+                        echo "<tr>";
+                            echo "<th><h1>Matérias</h1></th>";
+                            echo "<th><h1>Carga horária</h1></th>";
+                        echo "<tr>";
+                    echo "</thead>";
+
                     
+                
+                    echo "<tbody>";
                     for($i = 1; $i <= $qtdLinha; $i++){
 
                         $objAtual = $pesq->fetch_object();
+                        // print_r($objAtual);
                        
 
                         echo "<tr>";
-                           echo "<td>$objAtual->Materia</td>";
-                           echo "<td>$objAtual->Carga</td>";
+                           echo "<td>$objAtual->materia</td>";
+                           echo "<td>$objAtual->carga</td>";
                         echo "</tr>";
 
                     };
+                    echo "</tbody>";
                 
                 ?>
-
-
             </table>
-            <br>
-            <script src="../js/notas.js"></script>
-            <!-- <script src="../js/aulas.js"></script> -->
         </div>
-
     </main>
 
     <footer >

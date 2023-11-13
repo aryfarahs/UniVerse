@@ -5,22 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="..\css\style.css">
     <script src="..\js\javascript.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <title>UniVerse</title>
 </head>
 <body class="princ">
+
 <?php
-
 require_once 'funcoes.php';
-require_once 'header.php';
-
-
-
 
 ?>
+    <header>
+        <img src="../images/logo.png" alt="">
+        <h1>UNIVERSE</h1>
+        <div class="perfil">
+            <?php
+            if(!($_SESSION['usuario'])){
+                echo 'entrar';
+            }else{
 
+                echo "Olá, " . $_SESSION['nome'] . "   <abbr title='Perfil'><span class='material-symbols-outlined'>person</span></abbr>";
+                echo '<br><br><p class="logout"><a href="login.php?logout=1">Sair</a></p>';
+            }
+            ?>
+        </div>
+    </header>
 
-
-
+    <main>
+        <!-- NAVEGAÇÃO LATERAL -->
+        <div class="sideNav">
+            <nav>
+                <ul>
+                    <a href="home.php"><li class="sideSelect">&nbsp;HOME</li></a>
+                    <a href="aulas.php"><li>&nbsp;MINHAS AULAS</li></a>
+                    <a href="notas.php"><li>&nbsp;NOTAS/<br>&nbspFREQUÊNCIA</li></a>
+                    <a href="atvComp.php"><li>&nbsp;ATIVIDADES &nbsp;COMPLEMENTARES</li></a>
+                    <a href="posFin.php"><li>&nbsp;POSIÇÃO &nbsp;FINANCEIRA</li></a>
+                </ul>
+            </nav>
+        </div>
 
 
         <!-- HOME -->
@@ -35,6 +57,20 @@ require_once 'header.php';
                         <a onclick="showPage('idHE'), some('idHH')"><li>ESTÁGIOS</li></a>
                     </ul>
                 </nav>
+            </div>
+            
+            <div class="bemvindo">
+                <h1>Sejam Bem-Vindos à UniVerse!</h1>
+                <p>O mais completo WebAluno para todas as faculdades!</p>
+            </div>
+
+            <div class="boneco">
+                <img width="200px" src="../images/boneco.png" alt="Olá, eu sou o Rubi!">
+            </div>
+
+            <div class="iconInsta">
+                <img width="30px" src="../images/insta_icon.png" name="insta">
+                <label for="insta">@universe.pjbl</label>
             </div>
 
         </div>
@@ -109,7 +145,72 @@ require_once 'header.php';
                     </ul>
                 </nav>
             </div>
+            
+            <div class="divForm">
+                <form class="formFaculRides pagina" action="" id="frForm">
+                    <h1 class="titleForm">PARA PARTICIPAR, PREENCHA O FORMULÁRIO!</h1>
+                    <div class="info_endereco">
 
+                        <div class="labels_endereco">
+                            <label for="frRua">Rua:</label>
+                            <label for="frNum">Número:</label>
+                            <label for="frComp">Complemento:</label>
+                            <label for="frRef">Referência:</label>
+                            <label for="frTel">Telefone:</label>
+                        </div>
+
+                        <div class="inputs_endereco">
+                            <input type="text" name="frRua" id="idfrRua" required>
+                            <input type="text" name="frNum" id="idfrNum" required>
+                            <input type="text" name="frComp" id="idfrComp" placeholder="(Opcional)">
+                            <input type="text" name="frRef" id="idfrRef" placeholder="(Opcional)">
+                            <input type="text" name="frTel" id="idfrTel" required>
+                        </div>
+                        
+                    </div>
+
+                    <div class="checkbox_termos">
+                        <input type="checkbox" name="frConc" id="idfrConc" required>
+                        <label class="label" for="frConc">Declaro que estou de acordo com a utilização do meu endereço para localizar estudantes da minha região.</label>
+                    </div>
+                    
+                    <div class="submitForm">
+                        <input type="submit" value="Vamos lá!" onclick="tirablur('blurFR')">
+                    </div>
+                </form>
+            </div>
+
+            <div class="partFR blur" id="blurFR">
+                <p style="text-align: center;">*CLIQUE NO PERFIL PARA SABER MAIS*</p>
+                <div class="pessoaBox" onclick="revealTxt('pessoaXXX')">
+                    <div class="infoPessoa">
+                        <img src="../images/perfil.png" width="40px" height="40px">
+                        <h4>Pessoa X</h4>
+                        <h4>Água Verde</h4>
+                    </div>
+                    <p class="textPessoa" id="pessoaXXX">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, officia soluta voluptatem, iure reprehenderit ut consequatur nostrum accusamus, explicabo quaerat doloremque animi modi atque enim vitae in ullam. Nisi, tenetur! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus adipisci alias quasi incidunt culpa! Ipsa repellat modi ex eos quam consequuntur esse, magni vero nulla cum incidunt quas dicta earum.</p>
+                </div>
+                
+                <div class="pessoaBox" onclick="revealTxt('pessoaYYY')">
+                    <div class="infoPessoa">
+                        <img src="../images/perfil.png" width="40px" height="40px">
+                        <h4>Pessoa Y</h4>
+                        <h4>Centro</h4>
+                    </div>
+            
+                    <p class="textPessoa" id="pessoaYYY">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, officia soluta voluptatem, iure reprehenderit ut consequatur nostrum accusamus, explicabo quaerat doloremque animi modi atque enim vitae in ullam. Nisi, tenetur! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus adipisci alias quasi incidunt culpa! Ipsa repellat modi ex eos quam consequuntur esse, magni vero nulla cum incidunt quas dicta earum.</p>
+                </div>
+
+                <div class="pessoaBox" onclick="revealTxt('pessoaZZZ')">
+                    <div class="infoPessoa">
+                        <img src="../images/perfil.png" width="40px" height="40px">
+                        <h4>Pessoa Z</h4>
+                        <h4>Seminário</h4>
+                    </div>
+                    
+                    <p class="textPessoa" id="pessoaZZZ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, officia soluta voluptatem, iure reprehenderit ut consequatur nostrum accusamus, explicabo quaerat doloremque animi modi atque enim vitae in ullam. Nisi, tenetur! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus adipisci alias quasi incidunt culpa! Ipsa repellat modi ex eos quam consequuntur esse, magni vero nulla cum incidunt quas dicta earum.</p>
+                </div>
+            </div>
         </div>
 
 
@@ -139,9 +240,9 @@ require_once 'header.php';
                     <div class="estBox" onclick="revealTxt('estagioXXX')">
                         <div class="infoEstagio">
                             <img src="../images/empresa.png" alt="Empresa X">
-                            <p style="margin-top: 15px;">Empresa X</p>
-                            <p style="margin-top: 15px;">Análise de Sitstemas</p>
-                            <h3 style="margin-top: 15px;">VER</h3>
+                            <p>Empresa X</p>
+                            <p>Análise de Sitstemas</p>
+                            <h3>VER</h3>
                         </div>
                         <p class="textEstagio" id="estagioXXX">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit sunt dolorum sed? Quos aliquam qui totam unde iure. Quae ab mollitia aliquam earum in iste totam similique accusantium quam eligendi. Lorem ipsum dolor sit amet consectetur adipisicing elit. At quisquam vel, deserunt labore omnis corporis reprehenderit, quam, sed provident eveniet assumenda mollitia id consectetur placeat. Consequuntur facere architecto minus in. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem sapiente vel a assumenda praesentium quia harum nam rerum amet libero ducimus in architecto, aut dolorum atque ab facilis nisi quod?</p>
                     </div>
@@ -149,9 +250,9 @@ require_once 'header.php';
                     <div class="estBox" onclick="revealTxt('estagioYYY')">
                         <div class="infoEstagio">
                             <img src="../images/empresa.png" alt="Empresa Y">
-                            <p style="margin-top: 15px;">Empresa Y</p>
-                            <p style="margin-top: 15px;">Desenvolvimento Python</p>
-                            <h3 style="margin-top: 15px;">VER</h3>
+                            <p>Empresa Y</p>
+                            <p>Desenvolvimento Python</p>
+                            <h3>VER</h3>
                         </div>
                         <p class="textEstagio" id="estagioYYY">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit sunt dolorum sed? Quos aliquam qui totam unde iure. Quae ab mollitia aliquam earum in iste totam similique accusantium quam eligendi. Lorem ipsum dolor sit amet consectetur adipisicing elit. At quisquam vel, deserunt labore omnis corporis reprehenderit, quam, sed provident eveniet assumenda mollitia id consectetur placeat. Consequuntur facere architecto minus in. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem sapiente vel a assumenda praesentium quia harum nam rerum amet libero ducimus in architecto, aut dolorum atque ab facilis nisi quod?</p>
                     </div>
@@ -159,9 +260,9 @@ require_once 'header.php';
                     <div class="estBox" onclick="revealTxt('estagioZZZ')">
                         <div class="infoEstagio">
                             <img src="../images/empresa.png" alt="Empresa Z">
-                            <p style="margin-top: 15px;">Empresa Z</p>
-                            <p style="margin-top: 15px;">Gestão de Projetos</p>
-                            <h3 style="margin-top: 15px;">VER</h3>
+                            <p>Empresa Z</p>
+                            <p>Gestão de Projetos</p>
+                            <h3>VER</h3>
                         </div>
                         <p class="textEstagio" id="estagioZZZ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit sunt dolorum sed? Quos aliquam qui totam unde iure. Quae ab mollitia aliquam earum in iste totam similique accusantium quam eligendi. Lorem ipsum dolor sit amet consectetur adipisicing elit. At quisquam vel, deserunt labore omnis corporis reprehenderit, quam, sed provident eveniet assumenda mollitia id consectetur placeat. Consequuntur facere architecto minus in. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem sapiente vel a assumenda praesentium quia harum nam rerum amet libero ducimus in architecto, aut dolorum atque ab facilis nisi quod?</p>
                     </div>
