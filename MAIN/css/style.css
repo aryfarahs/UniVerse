@@ -699,7 +699,7 @@ footer .action {
     width: 900px;
     font-family: 'Lato', sans-serif;
     font-size: 16px;
-    margin-top: 30px;
+    margin-top: 50px;
     margin-bottom: 10px;
 }
 
@@ -708,7 +708,11 @@ footer .action {
     flex-direction: row;
     justify-content: space-between;
     border: 0.1px solid var(--verm);
-    padding: 20px;
+    padding: 15px;
+}
+
+.atv > p {
+    margin-top: 5px;
 }
 
 .atvHeader {
@@ -725,4 +729,35 @@ footer .action {
     padding: 2px;
     background-color: var(--verm);
     border: 0.1px solid var(--verm);
+}
+
+
+/* POS FINANCEIRA */
+.semestre {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--verm);
+    width: 900px;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: var(--branquin);
+    border: 0.1px solid var(--verm);
+    border-radius: 10px;
+    padding: 10px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.containerPOS {
+    display: inline-flex;
+    flex-direction: column;
+    padding: 0px;
+    margin-left: 200px;
+    margin-top: 0px;
+    padding-top: 0px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 1200px;
 }
