@@ -219,7 +219,7 @@ footer .action {
     .navHome li:hover {
         background-color: var(--cinzin);
         color: black;
-        border-radius: 5px;
+        border-radius: 10px;
         cursor: pointer;
         padding: 10px;
     }
@@ -230,7 +230,7 @@ footer .action {
         margin-left: 0px;
         padding: 10px;
         font-size: 16px;
-        border-radius: 15px;
+        border-radius: 10px;
         margin-top: 0px;
         padding-top: 0px;
         color: var(--branquin);
@@ -292,6 +292,10 @@ footer .action {
         &:hover{
             cursor: pointer;
         }
+    }
+
+    .warnBox > h3 {
+        margin: 0px;
     }
 
     .subW {
@@ -682,7 +686,7 @@ footer .action {
 .navATV li:hover {
     background-color: var(--cinzin);
     color: black;
-    border-radius: 15px;
+    border-radius: 10px;
     cursor: pointer;
     padding: 10px;
 }
