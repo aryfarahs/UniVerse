@@ -264,8 +264,8 @@ ob_start()
                     
                     <tr class="atv">
                         <!-- ID INT PRIMARY KEY AUTO INCREMENT -->
-                        <td><input type="text" class="input_atv" name="idatv" required></td>
-                        <td><input type="number" class="input_atv" required></td>
+                        <td><input type="number" class="input_atv" name="idatv" required></td>
+                        <td><input type="text" class="input_atv" required></td>
                         <td><input type="checkbox" class="anex" required></td>
                     </tr>
 
