@@ -705,7 +705,7 @@ footer .action {
     justify-content: space-between;
     border: 0.1px solid var(--verm);
     padding: 15px;
-    background-color: #ffd3de;
+    background-color: var(--rosin);
 }
 
 .anex {
@@ -736,7 +736,7 @@ footer .action {
     justify-content: space-between;
     border: 0.1px solid var(--verm);
     padding: 15px;
-    background-color: #ffd3de;
+    background-color: var(--rosin);
 }
 
 .atvHeader {
@@ -798,7 +798,7 @@ footer .action {
 
 .atvSubmit {
     background-color: var(--verm);
-    color: #F3EDE0;
+    color: var(--branquin);
     width: 140px;
     margin: auto;
     border: none;
