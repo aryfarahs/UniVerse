@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <script src="'..\js\javascript.js'"></script>
+    <script src="../js/javascript.js"></script>
     <title>UniVerse</title>
 </head>
 <body class="princ">
@@ -38,8 +38,8 @@
                 <nav>
                     <ul>
                         <a><li class="homeSelect">MINHAS ATIVIDADES</li></a>
-                        <a onclick="showPage('idATVE'), some('idATVM')"><li>ENVIAR ATIVIDADE</li></a>
-                        <a onclick="showPage('idATVD'), some('idATVM')"><li>DELETAR ATIVIDADE</li></a>
+                        <a onclick="some('idATVM'), showPage('idATVE')"><li>ENVIAR ATIVIDADE</li></a>
+                        <a onclick="some('idATVM'), showPage('idATVD')"><li>DELETAR ATIVIDADE</li></a>
                     </ul>
                 </nav>
             </div>
@@ -100,7 +100,8 @@
                     <p>Aprovado</p>
                 </div>
                 
-                <div class="atvFooter"></div>
+                <div class="atvFooter">
+                </div>
 
             </div>            
 
