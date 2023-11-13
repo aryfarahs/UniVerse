@@ -154,7 +154,15 @@ ob_start()
                             <!-- ID INT PRIMARY KEY AUTO INCREMENT -->
                             <td><input type="text" class="input_atv" name="nomeatv" required></td>
                             <td><input type="text" class="input_atv" name="grupoatv" required></td>
-                            <td><input type="text" class="input_atv" name="tipoatv" required></td>
+                            <!-- <td><input type="text" class="input_atv" name="tipoatv" required></td> -->
+                            <td>
+                                <select name="tipoatv" id="idtipo" class="input_atv" required>
+                                    <option value="--"></option>
+                                    <option value="palestra">Palestra</option>
+                                    <option value="Workshop">Workshop</option>
+                                    <option value="tv">Trabalho Voluntário</option>
+                                </select>
+                             </td>
                             <td><input type="number" class="input_atv" name="horasatv" required></td>
                         </tr>
 
