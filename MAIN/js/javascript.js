@@ -32,6 +32,17 @@ function revealTxt(id) {
 
 }
 
+function selectSem() {
+  var select = document.getElementById('idselSem')
+  var selectedPage = select.value;
+
+  var subpag = document.getElementsByClassName('subpagina')
+  for (var i = 0; i < subpag.length; i++) {
+    subpag[i].style.display = 'none'
+  }
+
+  document.getElementById(selectedPage).classList.remove('subpagina')
+}
 
 
 // FACULRIDES

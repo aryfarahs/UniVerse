@@ -641,7 +641,8 @@ footer .action {
 .containerATV {
     flex-direction: column;
     justify-content: space-evenly;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
     width: 80%;
     margin-left: 14%;
     margin-top: 180px;
@@ -759,23 +760,15 @@ footer .action {
 
 /* POS FINANCEIRA */
 .semestre {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     background-color: var(--verm);
-    width: 900px;
+    width: 500px;
     margin: auto;
-    margin-top: 15px;
-    margin-bottom: 5px;
     color: var(--branquin);
     border: 0.1px solid var(--verm);
     border-radius: 10px;
-    padding: 10px;
+    padding: 20px;
     font-family: 'Lato', sans-serif;
     font-size: 16px;
-    &:hover {
-        cursor: pointer;
-    }
 }
 
 .containerPOS {
@@ -786,17 +779,16 @@ footer .action {
     width: 80%;
     margin-left: 14%;
     position: absolute;
-    margin-top: 180px;
+    margin-top: 50px;
     
 }
 
 .posBox {
-    background-color: var(--rosin);
-    border: solid var(--verm);
-    border-radius: 10px;
     margin: auto;
-    width: 900px;
-    margin-top: 10px;
+    width: 500px;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 
@@ -834,4 +826,13 @@ footer .action {
     font-size: 16px;
     margin-top: 50px;
     margin-bottom: 10px;
+}
+
+.selectSem {
+    background-color: var(--verm);
+}
+
+.tabelinhasui {
+    display: flex;
+    flex-direction: row;
 }
