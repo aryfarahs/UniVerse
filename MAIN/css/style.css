@@ -711,9 +711,6 @@ footer .action {
     padding: 15px;
 }
 
-.atv > p {
-    margin-top: 5px;
-}
 
 .atvHeader {
     display: flex;
@@ -746,6 +743,8 @@ footer .action {
     border: 0.1px solid var(--verm);
     border-radius: 10px;
     padding: 10px;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
     &:hover {
         cursor: pointer;
     }
@@ -760,4 +759,21 @@ footer .action {
     padding-top: 0px;
     font-family: 'Courier New', Courier, monospace;
     width: 1200px;
+    
+}
+
+.posBox {
+    background-color: var(--rosin);
+    border: solid var(--verm);
+    border-radius: 10px;
+    margin: auto;
+    width: 900px;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.atv > p {
+       margin-top: 5px;
 }
