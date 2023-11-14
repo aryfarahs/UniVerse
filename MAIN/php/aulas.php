@@ -16,15 +16,15 @@ require_once 'funcoes.php';
 ?>
     <header>
         <img src="../images/UniverseBranco.png" alt="">
-        
+
         <div class="perfil">
             <?php
             if(!($_SESSION['usuario'])){
                 echo 'entrar';
             }else{
 
-                echo "Olá, " . $_SESSION['nome'] . "   <abbr title='Perfil'><span class='material-symbols-outlined'>person</span></abbr>";
-                echo '<br><br><p class="logout"><a href="index.php?logout=1">Sair</a></p>';
+                echo "<div class='perfil'>Olá, " . $_SESSION['nome'] . "</div>";
+                echo '<a href="index.php?logout=1"><p class="logout">Sair</p></a>';
             }
             ?>
         </div>

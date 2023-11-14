@@ -28,15 +28,19 @@ header {
 }
 
 
-
 .perfil{
     display: flex;
+    flex-direction: column;
     justify-content: right;
     text-align: right;
     width: fit-content;
+    font-family: 'Lato', sans-serif;
     /*background-color: aquamarine;*/
     font-size: 20px;
     vertical-align: middle;
+    background-color: var(--branquin);
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .material-symbols-outlined{
@@ -49,6 +53,7 @@ header {
 
 .logout{
     font-size: 15px;
+    text-decoration: none;
 }
     
 

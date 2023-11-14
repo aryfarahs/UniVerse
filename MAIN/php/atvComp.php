@@ -23,8 +23,8 @@ ob_start()
                 echo 'entrar';
             }else{
 
-                echo "Olá, " . $_SESSION['nome'] . "   <abbr title='Perfil'><span class='material-symbols-outlined'>person</span></abbr>";
-                echo '<br><br><p class="logout"><a href="index.php?logout=1">Sair</a></p>';
+                echo "<div class='perfil'>Olá, " . $_SESSION['nome'] . "</div>";
+                echo '<p class="logout"><a href="index.php?logout=1">Sair</a></p>';
             }
             ?>
         </div>
