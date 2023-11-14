@@ -44,8 +44,11 @@ ob_start()
             </nav>
         </div>
 
-        <div class="compGraph"></div>
-        <div class="incompGraph"></div>
+        <div class="barra">
+            <div class="progresso">
+                
+            </div>
+        </div>
         <h2 class="horas">72%</h2>
 
         <!-- MEUS -->
