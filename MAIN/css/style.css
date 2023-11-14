@@ -638,7 +638,7 @@ footer .action {
     color: var(--verm) ;
 }
 
-/* .containerATV {
+.containerATV {
     flex-direction: column;
     justify-content: space-evenly;
     font-family: 'Lato', sans-serif;
@@ -647,22 +647,9 @@ footer .action {
     margin-left: 14%;
     margin-top: 180px;
     position: absolute;
-} */
-
-.containerATV {
-    flex-direction: column;
-    justify-content: space-evenly;
-    font-family: 'Lato', sans-serif;
-    font-size: 16px;
-    width: 80%;
-    margin-left: 14%;
-    margin-top: 170px;
-    /* position: absolute; */
-    overflow: auto;
-    height: 900px;
-    box-sizing: border-box;
-    padding-top: 400px;
 }
+
+
 
 .navATV {
     display: flex;
@@ -705,15 +692,6 @@ footer .action {
     padding: 10px;
 }
 
-/* .atvBox {
-    margin: auto;
-    width: 900px;
-    font-family: 'Lato', sans-serif;
-    font-size: 16px;
-    margin-top: 50px;
-    margin-bottom: 10px;
-} */
-
 .atvBox {
     margin: auto;
     width: 900px;
@@ -721,10 +699,8 @@ footer .action {
     font-size: 16px;
     margin-top: 50px;
     margin-bottom: 10px;
-    /* background-color: blue; */
-    overflow: hidden;
-    max-height: 600px;
 }
+
 
 
 .atv {
