@@ -20,6 +20,7 @@
  
 
 header {
+    justify-content: space-between;
     background-color: var(--verm);
     padding: 35px;
     margin-bottom: 0px;
@@ -29,10 +30,11 @@ header {
 
 
 .perfil{
+    display: flex;
     justify-content: right;
     text-align: right;
-    width: 100%;
-    /* background-color: aquamarine; */
+    width: fit-content;
+    background-color: aquamarine;
     font-size: 20px;
     vertical-align: middle;
 }
@@ -53,7 +55,7 @@ header {
 header > h1 {
     display: inline-block;
     font-family: monospace;
-    font-size: 40px;
+    font-size: 44px;
     font-weight: bolder;
     color: var(--branquin);
     margin-top: 0px;
@@ -78,7 +80,7 @@ main {
 
 header > img {
     display: inline-block;
-    width: 40px;
+    width: 300px;
     margin-bottom: 0px;
 }
 
@@ -795,6 +797,11 @@ footer .action {
     margin-top: 20px;
     margin-bottom: 10px;
 }
+
+.atv > img:hover {
+    cursor: pointer;
+}
+
 
 .pos > p {
        margin-top: 5px;

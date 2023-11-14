@@ -15,8 +15,8 @@ ob_start()
 
 ?>
     <header>
-        <img src="../images/logo.png" alt="">
-        <h1>UNIVERSE</h1>
+        <img src="../images/UniverseBranco.png" alt="">
+
         <div class="perfil">
             <?php
             if(!($_SESSION['usuario'])){
