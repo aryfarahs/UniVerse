@@ -49,7 +49,7 @@ ob_start()
                 
             </div>
         </div>
-        <h2 class="horas">72%</h2>
+        <h2 class="horas">0%</h2>
 
         <!-- MEUS -->
         <div class="containerATV pagina" id="idATVM">
@@ -79,10 +79,10 @@ ob_start()
                     echo "<tr class='atvHeader'>";
                     echo "<td><h4>ID</h4></td>";
                     echo "<td><h4>Nome</h4></td>";
-                    echo "<td><h4>Grupo</h4></td>";
+                    echo "<td><h4>Instituição</h4></td>";
                     echo "<td><h4>Tipo</h4></td>";
                     echo "<td><h4>Horas</h4></td>";
-                    echo "<td><h4>Posição</h4></td>";
+                    echo "<td><h4>Status</h4></td>";
                     echo "<tr>";
                     echo "</thead>";
                     

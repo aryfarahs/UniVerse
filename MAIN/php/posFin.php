@@ -64,7 +64,7 @@ require_once 'funcoes.php';
 
                     <thead>
                         <tr class="atvHeader">
-                            <td><h4>Data</h4></td>
+                            <td><h4>Vencimento</h4></td>
                             <td><h4>Valor</h4></td>
                             <td><h4>Imprimir</h4></td>
                             <td><h4>Status</h4></td>
@@ -128,7 +128,7 @@ require_once 'funcoes.php';
 
                     <thead>
                         <tr class="atvHeader">
-                            <td><h4>Data</h4></td>
+                            <td><h4>Vencimento</h4></td>
                             <td><h4>Valor</h4></td>
                             <td><h4>Imprimir</h4></td>
                             <td><h4>Status</h4></td>
