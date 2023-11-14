@@ -40,7 +40,7 @@ require_once 'funcoes.php';
 			<span>ou acesse sua conta atraves do E-mail</span>
 			<input type="email" placeholder="Email" required name="email" />
 			<input type="password" placeholder="Senha" required name="senha" />
-			<a href="#">Esqueceu sua senha?</a>
+			<a href="#" style="color: black;">Esqueceu sua senha?</a>
             <input type="submit" value="ENTRAR" style="background-color: #A43039; color: white; border-radius: 30px; font-weight: bold; width: 150px;">
 		</form>
 
